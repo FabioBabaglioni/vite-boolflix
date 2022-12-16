@@ -1,6 +1,7 @@
 <script >
+import axios from "axios"
 import appHeader from './components/appHeader.vue'
-import { store } from `./store`
+import { store } from "./store"
 import appMain from './components/appMain.vue'
 
 
@@ -17,12 +18,12 @@ export default {
   },
 
   methods: {
-    getCharacters() {
+    getMovies() {
 
       axios
-        .get(apiUrl += `${store.apiKey}${store.apiUrlMovies}${store.apiSearchText}`)
+        .get(store.apiUrl += `${store.apiKey}${store.apiUrlMovies}${store.apiSearchText}`)
         .then(res => {
-          store.movies = ;
+          store.movies = res.data.results;
         })
         .catch(err => {
           console.log("Errori, err")
@@ -30,16 +31,16 @@ export default {
     }
   },
   mounted() {
-    this.getCharacters()
+    this.getMovies()
   }
 }
-}
+
 </script>
 
 
 <template>
   <header>
-    <appHeader />
+    <appHeader @search="getMovies" />
   </header>
 
   <main>
