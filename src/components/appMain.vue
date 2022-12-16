@@ -1,7 +1,12 @@
 <script>
+import { store } from "../store"
 
 export default {
-
+    data() {
+        return {
+            store
+        }
+    }
 }
 
 </script>
@@ -9,10 +14,10 @@ export default {
 <template>
 
     <section class="container_width pt-3">
-        <div>Titolo: </div>
-        <div>Titolo originale: </div>
-        <div>Lingua: </div>
-        <div>Voto: </div>
+        <div v-for="(option, index) in store.optionFilm">
+            <span>{{ store.optionFilm[index] }} </span>
+            <span> risultato api</span>
+        </div>
 
     </section>
 
