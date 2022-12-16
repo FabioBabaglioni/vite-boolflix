@@ -12,12 +12,17 @@ export default {
 
 
 <template>
+  <header>
+    <appHeader />
+  </header>
 
-  <appHeader />
-  <appMain />
+  <main>
+    <appMain />
+  </main>
+
 
 </template>
 
-<style scoped>
-
+<style lang="scss">
+@use "./components/style/general.scss";
 </style>
