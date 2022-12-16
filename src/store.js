@@ -8,10 +8,4 @@ export const store = reactive({
     apiUrlSeries: "/search/series/550&query=",
     apiKey: "?api_key=fa8e15da4a5b52dca91a0f6a7d7abde2",
     apiSearchText: "",
-    optionFilm: [
-        "Titolo:",
-        "Titolo originale:",
-        "Lingua:",
-        "Voto:",
-    ]
 })
