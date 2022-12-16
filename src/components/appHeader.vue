@@ -2,6 +2,10 @@
 
 export default {
 
+    methods: {
+
+    }
+
 }
 
 </script>
@@ -10,10 +14,10 @@ export default {
     <section>
         <div class="d-flex justify-content-between align-items-center container_width">
             <h1>BOOLFLIX</h1>
-            <label for="">
-                <input type="text" class="me-2" placeholder="Cerca film">
-                <button>search</button>
-            </label>
+            <div>
+                <input type="text" class="me-2" id="searchBar" placeholder="Cerca film">
+                <button id="searchBar">search</button>
+            </div>
 
         </div>
 
