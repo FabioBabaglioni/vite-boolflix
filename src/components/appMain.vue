@@ -1,4 +1,5 @@
 <script>
+import appCard from "./appCard.vue"
 import { store } from "../store"
 
 export default {
@@ -6,6 +7,9 @@ export default {
         return {
             store
         }
+    },
+    components: {
+        appCard
     }
 }
 
@@ -14,27 +18,8 @@ export default {
 <template>
 
     <section class="container_width pt-3 d-flex flex-wrap pe-2">
-        <div v-for="(movie, index) in store.movies" :key="index" class="card">
-            <div>
-                <span>titolo: {{ movie.title }}</span>
-            </div>
-            <div>
-                <span v-if="movie.title != movie.original_title">Titolo originale: {{ movie.original_title }} {{
-                        movie.original_name
-                }} </span>
-            </div>
-            <div>
-                <span>Lingua:
-                    <img src="../img/uk.png" alt="" v-if="movie.original_language === `en`">
-                    <img src="../img/italy.png" alt="" v-else-if="movie.original_language === `it`">
-                    <img src="../img/france.png" alt="" v-else-if="movie.original_language === `fr`">
-                    <img src="../img/cyprus.png" alt="" v-else="">
-                    <!-- {{ movie.original_language }} -->
-                </span>
-            </div>
-            <div>
-                <span>Voto: {{ movie.vote_average }}</span>
-            </div>
+        <div v-for="(movie, index) in store.movies" :key="index" class="card" :film="movie">
+            <appCard />
         </div>
 
     </section>
