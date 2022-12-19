@@ -27,8 +27,10 @@ export default {
 
 <style scoped>
 .card {
-    width: calc((100% / 4) - 10px);
+    width: calc((100% / 3) - 10px);
     margin: 10px 5px;
-    background-color: green;
+    /* background-color: green; */
+    text-align: center;
+    border: solid 2px red;
 }
 </style>
