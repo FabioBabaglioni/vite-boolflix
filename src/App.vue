@@ -20,15 +20,22 @@ export default {
   methods: {
     getMovies() {
 
+      let myUrl = store.apiUrl;
+
+      if (store.apiSearchText !== "") {
+        myUrl += `${store.apiSearchText}`
+      }
+
       axios
 
-        .get(store.apiUrl += `${store.apiSearchText}`)
+        .get(myUrl)
         .then(res => {
           store.movies = res.data.results;
         })
         .catch(err => {
           console.log("Errori, err")
-        })
+        });
+
     }
   },
   // mounted() {

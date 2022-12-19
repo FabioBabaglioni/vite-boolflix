@@ -19,7 +19,7 @@ export default {
                 <span>titolo: {{ movie.title }}</span>
             </div>
             <div>
-                <span>Titolo originale: {{ movie.original_title }} </span>
+                <span v-if="movie.title != movie.original_title">Titolo originale: {{ movie.original_title }} </span>
             </div>
             <div>
                 <span>Lingua: {{ movie.original_language }}</span>
