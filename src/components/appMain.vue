@@ -13,10 +13,10 @@ export default {
 
 <template>
 
-    <section class="container_width pt-3">
-        <div v-for="(movie, index) in store.movies" :key="index" class="d-flex card">
+    <section class="container_width pt-3 d-flex flex-wrap pe-2">
+        <div v-for="(movie, index) in store.movies" :key="index" class="card">
             <div>
-                <span>titolo: </span>
+                <span>titolo: {{ movie.title }}</span>
             </div>
             <div>
                 <span>Titolo originale: {{ movie.original_title }} </span>
@@ -35,7 +35,8 @@ export default {
 
 <style scoped>
 .card {
-    width: calc(100% / 4);
+    width: calc((100% / 4) - 10px);
+    margin: 10px 5px;
     background-color: green;
 }
 </style>

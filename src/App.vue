@@ -21,7 +21,7 @@ export default {
     getMovies() {
 
       axios
-        // .get(store.apiUrl += `${store.apiKey}${store.apiUrlMovies}${store.apiSearchText}`)
+
         .get(store.apiUrl += `${store.apiSearchText}`)
         .then(res => {
           store.movies = res.data.results;
@@ -41,7 +41,7 @@ export default {
 
 <template>
   <header>
-    <appHeader @search="this.getMovies()" />
+    <appHeader @search="this.getMovies" />
   </header>
 
   <main>
