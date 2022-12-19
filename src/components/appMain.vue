@@ -22,7 +22,13 @@ export default {
                 <span v-if="movie.title != movie.original_title">Titolo originale: {{ movie.original_title }} </span>
             </div>
             <div>
-                <span>Lingua: {{ movie.original_language }}</span>
+                <span>Lingua:
+                    <img src="../img/uk.png" alt="" v-if="movie.original_language === `en`">
+                    <img src="../img/italy.png" alt="" v-else-if="movie.original_language === `it`">
+                    <img src="../img/france.png" alt="" v-else-if="movie.original_language === `fr`">
+                    <img src="../img/cyprus.png" alt="" v-else="">
+                    <!-- {{ movie.original_language }} -->
+                </span>
             </div>
             <div>
                 <span>Voto: {{ movie.vote_average }}</span>
@@ -38,5 +44,9 @@ export default {
     width: calc((100% / 4) - 10px);
     margin: 10px 5px;
     background-color: green;
+}
+
+img {
+    width: 20px;
 }
 </style>
