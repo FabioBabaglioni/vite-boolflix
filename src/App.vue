@@ -23,7 +23,7 @@ export default {
       let myUrl = store.apiUrl;
 
       if (store.apiSearchText !== "") {
-        myUrl += `${store.apiSearchText}`
+        myUrl += `${store.apiKey}${store.apiSearchText}`
       }
 
       axios
@@ -36,7 +36,26 @@ export default {
           console.log("Errori, err")
         });
 
-    }
+    },
+    // getSeries() {
+
+    //   let myUrl = store.apiUrl;
+
+    //   if (store.apiSearchText !== "") {
+    //     myUrlSeries += `${store.apiSeries}${store.apiKey}${store.apiSearchText}`
+    //   }
+
+    //   axios
+
+    //     .get(myUrlSeries)
+    //     .then(res => {
+    //       store.series = res.data.results;
+    //     })
+    //     .catch(err => {
+    //       console.log("Errori, err")
+    //     });
+
+    // }
   },
   // mounted() {
   //   this.getMovies()
