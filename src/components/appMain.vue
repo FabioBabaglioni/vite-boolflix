@@ -18,10 +18,9 @@ export default {
 <template>
 
     <section class="container_width pt-3 d-flex flex-wrap pe-2">
-        <div v-for="(movie, index) in store.movies" :key="index" class="card" :film="movie">
-            <appCard />
+        <div v-for="(movie, index) in store.movies" :key="index" class="card">
+            <appCard :film="movie" />
         </div>
-
     </section>
 
 </template>
@@ -31,9 +30,5 @@ export default {
     width: calc((100% / 4) - 10px);
     margin: 10px 5px;
     background-color: green;
-}
-
-img {
-    width: 20px;
 }
 </style>

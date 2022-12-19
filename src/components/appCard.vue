@@ -2,7 +2,7 @@
 
 export default {
     props: {
-        film: Array,
+        film: Object,
     }
 }
 
@@ -24,7 +24,6 @@ export default {
         <img src="../img/italy.png" alt="" v-else-if="film.original_language === `it`">
         <img src="../img/france.png" alt="" v-else-if="film.original_language === `fr`">
         <img src="../img/cyprus.png" alt="" v-else="">
-        <!-- {{ film.original_language }} -->
     </div>
 
     <div>
