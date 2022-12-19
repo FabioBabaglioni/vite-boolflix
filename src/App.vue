@@ -21,7 +21,8 @@ export default {
     getMovies() {
 
       axios
-        .get(store.apiUrl += `${store.apiKey}${store.apiUrlMovies}${store.apiSearchText}`)
+        // .get(store.apiUrl += `${store.apiKey}${store.apiUrlMovies}${store.apiSearchText}`)
+        .get(store.apiUrl += `${store.apiSearchText}`)
         .then(res => {
           store.movies = res.data.results;
         })
@@ -30,9 +31,9 @@ export default {
         })
     }
   },
-  mounted() {
-    this.getMovies()
-  }
+  // mounted() {
+  //   this.getMovies()
+  // }
 }
 
 </script>
@@ -40,7 +41,7 @@ export default {
 
 <template>
   <header>
-    <appHeader @search="getMovies" />
+    <appHeader @search="this.getMovies()" />
   </header>
 
   <main>
