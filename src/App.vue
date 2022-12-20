@@ -18,6 +18,7 @@ export default {
   },
 
   methods: {
+    // metodo per fare la chiamata APi
     getMovies() {
 
       let myUrl = store.apiUrl;
@@ -37,29 +38,7 @@ export default {
         });
 
     },
-    // getSeries() {
-
-    //   let myUrl = store.apiUrl;
-
-    //   if (store.apiSearchText !== "") {
-    //     myUrlSeries += `${store.apiSeries}${store.apiKey}${store.apiSearchText}`
-    //   }
-
-    //   axios
-
-    //     .get(myUrlSeries)
-    //     .then(res => {
-    //       store.series = res.data.results;
-    //     })
-    //     .catch(err => {
-    //       console.log("Errori, err")
-    //     });
-
-    // }
-  },
-  // mounted() {
-  //   this.getMovies()
-  // }
+  }
 }
 
 </script>
@@ -67,6 +46,7 @@ export default {
 
 <template>
   <header>
+    <!-- punto di ricezione emit -->
     <appHeader @search="this.getMovies" />
   </header>
 
@@ -80,7 +60,10 @@ export default {
 <style lang="scss">
 @use "./components/style/general.scss";
 
+// css main generico
 main {
   background-color: grey;
+  height: calc(100vh - 100px);
+  overflow: auto;
 }
 </style>
