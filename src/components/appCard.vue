@@ -12,9 +12,12 @@ export default {
 }
 
 </script>
+<!-- componenete dei dati della card -->
 
 <template>
     <div class="info">
+
+        <!-- copertina film -->
         <div class="img_cover">
             <img :src="`https://image.tmdb.org/t/p/w342${film.poster_path}`" alt="">
         </div>
@@ -30,6 +33,7 @@ export default {
             </div>
 
             <div>
+                <!-- v-if per inserire la bandiera dello stato  -->
                 <strong>LINGUA:</strong>
                 <img class="flag" src="../img/uk.png" alt="" v-if="film.original_language === `en`">
                 <img class="flag" src="../img/italy.png" alt="" v-else-if="film.original_language === `it`">
@@ -38,6 +42,7 @@ export default {
             </div>
 
             <div>
+                <!-- props per portare il dato film nel componenente figlio -->
                 <appVote :vote="film" />
             </div>
 
@@ -54,14 +59,16 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use "./style/partials/variables.scss" as *;
+
 .info {
     position: relative;
 
     .container_info {
         font-size: 20px;
-        background-color: black;
-        border: 1px solid white;
-        color: white;
+        background-color: $brandBackground;
+        border: 1px solid $brandSecondary;
+        color: $brandSecondary;
         width: 100%;
         height: 100%;
         display: none;
@@ -79,23 +86,13 @@ export default {
 
     &:hover {
 
-        .img_cover {
-            filter: grayscale(1);
-            filter: opacity(.2);
-        }
-
         .container_info {
             display: block;
         }
     }
-
 }
 
 .flag {
     width: 20px;
-}
-
-.fa-star {
-    color: #FFD700;
 }
 </style>
