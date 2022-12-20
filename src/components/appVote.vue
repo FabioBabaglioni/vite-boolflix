@@ -4,6 +4,12 @@ export default {
     props: {
         vote: Object,
     },
+    computed: {
+        getVoto() {
+            const voto = Math.ceil(this.vote.vote_average / 2)
+            return voto;
+        }
+    },
 
 
 }
@@ -12,9 +18,50 @@ export default {
 
 <template>
 
-    <div v-if="vote.vote_average === 1">
-        Voto: {{ star }} <font-awesome-icon icon="fa-solid fa-star" />
+    <!-- <div>
+        Voto: {{ getVoto }}
+    </div> -->
+
+    <div v-if="getVoto === 1">
+        Voto:
+        <font-awesome-icon icon="fa-solid fa-star" />
         <font-awesome-icon icon="fa-regular fa-star" />
+        <font-awesome-icon icon="fa-regular fa-star" />
+        <font-awesome-icon icon="fa-regular fa-star" />
+        <font-awesome-icon icon="fa-regular fa-star" />
+
+    </div>
+    <div v-else-if="getVoto === 2">
+        Voto:
+        <font-awesome-icon icon="fa-solid fa-star" />
+        <font-awesome-icon icon="fa-solid fa-star" />
+        <font-awesome-icon icon="fa-regular fa-star" />
+        <font-awesome-icon icon="fa-regular fa-star" />
+        <font-awesome-icon icon="fa-regular fa-star" />
+    </div>
+    <div v-else-if="getVoto === 3">
+        Voto:
+        <font-awesome-icon icon="fa-solid fa-star" />
+        <font-awesome-icon icon="fa-solid fa-star" />
+        <font-awesome-icon icon="fa-solid fa-star" />
+        <font-awesome-icon icon="fa-regular fa-star" />
+        <font-awesome-icon icon="fa-regular fa-star" />
+    </div>
+    <div v-else-if="getVoto === 4">
+        Voto:
+        <font-awesome-icon icon="fa-solid fa-star" />
+        <font-awesome-icon icon="fa-solid fa-star" />
+        <font-awesome-icon icon="fa-solid fa-star" />
+        <font-awesome-icon icon="fa-solid fa-star" />
+        <font-awesome-icon icon="fa-regular fa-star" />
+    </div>
+    <div v-else-if="getVoto === 5">
+        Voto:
+        <font-awesome-icon icon="fa-solid fa-star" />
+        <font-awesome-icon icon="fa-solid fa-star" />
+        <font-awesome-icon icon="fa-solid fa-star" />
+        <font-awesome-icon icon="fa-solid fa-star" />
+        <font-awesome-icon icon="fa-solid fa-star" />
     </div>
 
 </template>
