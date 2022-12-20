@@ -17,7 +17,7 @@ export default {
 
 <template>
 
-    <section class="container_width pt-3 d-flex flex-wrap pe-2">
+    <section class="container_width pt-3 d-flex flex-wrap pe-2 justify-content-center">
         <div v-for="(movie, index) in store.movies" :key="index" class="card">
             <appCard :film="movie" />
         </div>
@@ -27,10 +27,8 @@ export default {
 
 <style scoped>
 .card {
-    width: calc((100% / 3) - 10px);
     margin: 10px 5px;
-    /* background-color: green; */
     text-align: center;
-    border: solid 2px red;
+    width: 342px;
 }
 </style>

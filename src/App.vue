@@ -79,4 +79,8 @@ export default {
 
 <style lang="scss">
 @use "./components/style/general.scss";
+
+main {
+  background-color: grey;
+}
 </style>

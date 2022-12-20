@@ -23,7 +23,7 @@ export default {
     </div> -->
 
     <div v-if="getVoto === 1">
-        Voto:
+        <strong>VOTO:</strong>
         <font-awesome-icon icon="fa-solid fa-star" />
         <font-awesome-icon icon="fa-regular fa-star" />
         <font-awesome-icon icon="fa-regular fa-star" />
@@ -32,7 +32,7 @@ export default {
 
     </div>
     <div v-else-if="getVoto === 2">
-        Voto:
+        <strong>VOTO:</strong>
         <font-awesome-icon icon="fa-solid fa-star" />
         <font-awesome-icon icon="fa-solid fa-star" />
         <font-awesome-icon icon="fa-regular fa-star" />
@@ -40,7 +40,7 @@ export default {
         <font-awesome-icon icon="fa-regular fa-star" />
     </div>
     <div v-else-if="getVoto === 3">
-        Voto:
+        <strong>VOTO:</strong>
         <font-awesome-icon icon="fa-solid fa-star" />
         <font-awesome-icon icon="fa-solid fa-star" />
         <font-awesome-icon icon="fa-solid fa-star" />
@@ -48,7 +48,7 @@ export default {
         <font-awesome-icon icon="fa-regular fa-star" />
     </div>
     <div v-else-if="getVoto === 4">
-        Voto:
+        <strong>VOTO:</strong>
         <font-awesome-icon icon="fa-solid fa-star" />
         <font-awesome-icon icon="fa-solid fa-star" />
         <font-awesome-icon icon="fa-solid fa-star" />
@@ -56,7 +56,7 @@ export default {
         <font-awesome-icon icon="fa-regular fa-star" />
     </div>
     <div v-else-if="getVoto === 5">
-        Voto:
+        <strong>VOTO:</strong>
         <font-awesome-icon icon="fa-solid fa-star" />
         <font-awesome-icon icon="fa-solid fa-star" />
         <font-awesome-icon icon="fa-solid fa-star" />
