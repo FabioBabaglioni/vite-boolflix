@@ -59,18 +59,18 @@ export default {
 
     .container_info {
         font-size: 20px;
-        background-color: rgba($color: #000000, $alpha: .5);
+        background-color: black;
+        border: 1px solid white;
         color: white;
-        width: 90%;
-        height: 400px;
+        width: 100%;
+        height: 100%;
         display: none;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 40px;
+        top: 0;
+        left: 0;
         overflow: auto;
-        padding: 10px;
+        padding: 100px 20px 20px 20px;
+        text-align: left;
 
         .small_text {
             font-size: 15px;
