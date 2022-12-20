@@ -1,14 +1,14 @@
 <script>
+import appVote from './appVote.vue'
 
 export default {
+    components: {
+        appVote
+    },
     props: {
         film: Object,
     },
-    methods: {
-        getImage() {
 
-        }
-    }
 }
 
 </script>
@@ -36,7 +36,7 @@ export default {
     </div>
 
     <div>
-        Voto: {{ film.vote_average }}
+        <appVote :vote="film" />
     </div>
 
 </template>
@@ -44,5 +44,9 @@ export default {
 <style scoped>
 .flag {
     width: 20px;
+}
+
+.fa-star {
+    color: #FFD700;
 }
 </style>
