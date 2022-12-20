@@ -18,10 +18,7 @@ export default {
 
 <template>
 
-    <!-- <div>
-        Voto: {{ getVoto }}
-    </div> -->
-
+    <!-- conversione voto in stelle -->
     <div v-if="getVoto === 1">
         <strong>VOTO:</strong>
         <font-awesome-icon icon="fa-solid fa-star" />
